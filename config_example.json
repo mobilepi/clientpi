@@ -1,0 +1,47 @@
+{
+	"login": "login@test.com",
+	"password": "secret_password",
+	"plugins": [
+		{
+			"id": 1,
+			"type": "input",
+			"commands": [{
+				"get_value": "bash ./scripts/get_light_state.sh",
+				"set_value": "bash ./scripts/set_light_state.sh $"
+			}],
+			"shift": 0,
+			"group_name": "Room",
+			"description": "Light"
+		},
+                {
+			"id": 2,
+                        "type": "output",
+                        "commands": [{
+                                "get_value": "bash ./scripts/get_door_state.sh"
+                        }],
+			"group_name": "Room",
+			"description": "Door",
+                        "refresh": 1,
+			"map": [{
+				 "1": "Open",
+				 "2": "Close"
+			}],
+			"active": false,
+			"refresh": 1
+                },
+		{
+			"id": 3,
+			"type": "output",
+			"commands": [{
+				  "get_value": "bash ./scripts/get_temp_dec.sh",
+				  "get_fraction_value": "bash ./scripts/get_temp_frac.sh"
+			}],
+			"group_name": "Raspberry Pi",
+			"description": "Temperature",
+			"shift": 0,
+			"factor": 0.1,
+			"unit": "'C",
+			"refresh": 10
+		}
+	]
+}
