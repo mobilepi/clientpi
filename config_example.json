@@ -11,7 +11,8 @@
 			}],
 			"shift": 0,
 			"group_name": "Room",
-			"description": "Light"
+			"description": "Light",
+			"store_logs": true
 		},
                 {
 			"id": 2,
@@ -41,7 +42,8 @@
 			"shift": 0,
 			"factor": 0.1,
 			"unit": "'C",
-			"refresh": 10
+			"refresh": 10,
+			"store_logs": true
 		}
 	]
 }
